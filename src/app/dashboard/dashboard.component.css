@@ -1,0 +1,16 @@
+i:hover {
+  color: #f59e0b;
+}
+i {
+  cursor: pointer;
+  /* margin: 0 10px; */
+}
+.searchbox {
+  margin-left: 16px;
+}
+.icons {
+  margin: 0 10px;
+}
+.hButton {
+  margin: 0 5px;
+}

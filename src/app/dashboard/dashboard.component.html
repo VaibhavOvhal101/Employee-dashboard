@@ -1,0 +1,244 @@
+<!-- <-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <div class="navbar-brand mt-2 mt-lg-0">
+        <img src="assets/images.png" height="40" alt="Logo" loading="lazy" />
+      </div>
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Projects</a>
+        </li>
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+
+    <!-- Right elements -->
+    <div class="d-flex align-items-center">
+      <div class="dropdown">
+        <a
+          class="dropdown-toggle d-flex align-items-center hidden-arrow"
+          id="navbarDropdownMenuAvatar"
+          role="button"
+          data-mdb-toggle="dropdown"
+          aria-expanded="true"
+        >
+          Welcome &nbsp; <span style="color: brown"></span>..!
+        </a>
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdownMenuAvatar"
+        >
+          <li>
+            <a class="dropdown-item" href="#">My profile</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Settings</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Right elements -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+
+<!-- -----------Search Box------------- -->
+<div class="col-12">
+  <h2 class="text-center font-weight-bold">Employee List</h2>
+  <div class="d-flex justify-content-start">
+    <div class="mt-3 searchbox">
+      <span class="p-input-icon-right">
+        <i class="pi pi-search"></i>
+        <input
+          type="text"
+          class="pInputtext-lg form-control"
+          pInputText
+          placeholder="Search"
+          [(ngModel)]="value3"
+          (input)="search.filterGlobal($any($event.target).value, 'contains')"
+        />
+      </span>
+    </div>
+    <!---------- DialogeBox ------------->
+    <div class="ml-auto p-2">
+      <p-button
+        (click)="showBasicDialog()"
+        styleClass="p-button-warning"
+        icon="pi pi-user-plus"
+        label="Add New"
+      ></p-button>
+      <p-dialog
+        header="Add New Employee"
+        [(visible)]="visible"
+        [style]="{ width: '40vw' }"
+      >
+        <!-------------- Form  ------------------>
+
+        <form
+          [formGroup]="dialogForm"
+          (ngSubmit)="displayResponsive(dialogForm)"
+        >
+          <!-------------- Name Input ------------------>
+
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form3Example1cg">Your Name</label>
+            <input
+              type="text"
+              id="form3Example1cg"
+              class="form-control form-control-lg"
+              formControlName="Name"
+            />
+            <span
+              class="text-danger"
+              style="font-size: 12px"
+              *ngIf="Name && Name.invalid && Name.touched"
+            >
+              *This field is reqiured
+            </span>
+          </div>
+          <!-------------- Mobile Number Input ------------------>
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form3Example3cg"
+              >Mobile Number
+            </label>
+            <input
+              type="tel"
+              id="form3Example3cg"
+              class="form-control form-control-lg"
+              formControlName="mobile"
+            />
+            <span
+              class="text-danger"
+              style="font-size: 12px"
+              *ngIf="mobile && mobile.invalid && mobile.touched"
+            >
+              *This field is reqiured
+            </span>
+          </div>
+          <!-------------- Address Input ------------------>
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form3Example4cg">Address</label>
+            <input
+              type="text"
+              id="form3Example4cg"
+              class="form-control form-control-lg"
+              formControlName="Address"
+            />
+            <span
+              class="text-danger"
+              style="font-size: 12px"
+              *ngIf="Address && Address.invalid && Address.touched"
+            >
+              *This field is reqiured
+            </span>
+          </div>
+          <!-------------- Age Input ------------------>
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form3Example4cdg">Age</label>
+            <input
+              type="text"
+              id="form3Example4cdg"
+              class="form-control form-control-lg"
+              formControlName="Age"
+            />
+            <span
+              class="text-danger"
+              style="font-size: 12px"
+              *ngIf="Age && Age.invalid && Age.touched"
+            >
+              *This field is reqiured
+            </span>
+          </div>
+          <p-button
+            type="submit"
+            [disabled]="dialogForm.invalid"
+            class="hButton"
+            label="Save"
+          ></p-button>
+          <p-button
+            label="Close"
+            (click)="visible = false"
+            styleClass="p-button-secondary"
+          ></p-button>
+          <p-button
+            label="Update"
+            (click)="update()"
+            styleClass="p-button-secondary"
+          ></p-button>
+        </form>
+        <!------------------ Dialog Button ----------------->
+      </p-dialog>
+    </div>
+  </div>
+  <!------------------- Table----------- -->
+  <div class="col">
+    <p-table
+      #search
+      [value]="empList"
+      styleClass="p-datatable-gridlines"
+      [tableStyle]="{ 'min-width': '50rem' }"
+      [paginator]="true"
+      [rows]="10"
+      [rowsPerPageOptions]="[10, 15, 20]"
+      [globalFilterFields]="['Name', 'mobile', 'Address', 'Age']"
+    >
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Name</th>
+          <th>Mobile</th>
+          <th>Address</th>
+          <th>Age</th>
+          <th>Actions</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-empList>
+        <tr class="font-weight-bold">
+          <td>{{ empList.Name }}</td>
+          <td>{{ empList.mobile }}</td>
+          <td>{{ empList.Address }}</td>
+          <td>{{ empList.Age + " Years" }}</td>
+          <td>
+            <i
+              class="pi pi-pencil icons"
+              pTooltip="Edit"
+              tooltipPosition="top"
+              (click)="onEdit(empList.id)"
+              style="color: #28a745; font-size: 20px"
+            >
+            </i>
+            <!-- &nbsp; &nbsp; -->
+            <i
+              class="pi pi-trash icons"
+              pTooltip="Delete"
+              tooltipPosition="top"
+              (click)="onDelete(empList.id)"
+              style="color: #dc3545; font-size: 20px"
+            ></i>
+          </td>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td colspan="7">No Employee Found.</td>
+        </tr>
+      </ng-template>
+      <tr></tr>
+    </p-table>
+  </div>
+</div>

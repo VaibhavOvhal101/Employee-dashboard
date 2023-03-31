@@ -1,94 +1,35 @@
-<!-- <h2>Login Page</h2>
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-  
-  <div class="form-outline mb-4">
-    <input
-      type="name"
-      id="form2Example1"
-      class="form-control col-md-4"
-      formControlName="userName"
-      [(ngModel)]="playerName"
-      #data
-    />
-    <span
-      style="color: red; font-size: 12px;"
-      *ngIf="userName && userName.invalid && userName.touched"
-    >
-      *This field is reqiured
-    </span>
-    <br />
-    <label class="form-label" for="form2Example1">Email address</label>
-  </div>
-
-  <div class="form-outline mb-4">
-    <input
-      type="password"
-      id="form2Example2"
-      class="form-control col-md-4"
-      formControlName="password"
-    />
-    <span
-      style="color: red; font-size: 12px;"
-      *ngIf="password && password.invalid && password.touched"
-    >
-      *This field is reqiured
-    </span>
-    <br />
-    <label class="form-label" for="form2Example2">Password</label>
-
-    <br />
-  </div>
-  <button
-    type="submit"
-    class="btn btn-primary btn-block mb-4 col-md-4"
-    routerLink="/home"
-    (click)="sendData(data)"
-  >
-    Sign in
-  </button>
-</form> -->
-<div class="flex justify-content-center p-4">
-  <div class="card bg-dark text-white p-4">
+<div class="flex justify-content-center align-self-center ">
+  <div class="card bg-dark text-white p-4 ">
     <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
       <h5>Please Sign in your account</h5>
       <div class="row">
         <div class="col-12">
+
           <!------------- FirstName -------------->
-          <input pInputText class="form-control" placeholder="First Name" formControlName="fName" [(ngModel)]="Name"
-            #data />
-          <span class="text-danger" style="font-size: 12px;" *ngIf="fName && fName.invalid && fName.touched">
+          <input pInputText class="form-control" placeholder="User Name" formControlName="userName" #data />
+          <span class="text-danger" style="font-size: 12px;" *ngIf="userName && userName.invalid && userName.touched">
             *This field is reqiured
           </span>
           <br>
         </div>
       </div>
-      <!------------- LastName -------------->
+      <!------------- Password -------------->
 
       <div class="row">
         <div class="col-12">
-          <input pInputText type="password" class="form-control" placeholder="Password" formControlName="lName"
-            [(ngModel)]="lastName" #lname />
-          <span class="text-danger" style="font-size: 12px;" *ngIf="lName && lName.invalid && lName.touched">
+          <input pInputText type="password" class="form-control" placeholder="Password" formControlName="password"
+            #lname />
+          <span class="text-danger" style="font-size: 12px;" *ngIf="password && password.invalid && password.touched">
             *This field is reqiured
           </span>
         </div>
       </div>
       <br />
-      <!------------- mobile No -------------->
 
-      <!-- <div class="row">
-        <div class="col-12">
-          <input pInputText type="tel" placeholder="Mobile No" class="form-control" formControlName="mobileNo" />
-          <span class="text-danger" style="font-size: 12px;" *ngIf="mobileNo && mobileNo.invalid && mobileNo.touched">
-            *Invalid Mobile Number
-          </span>
-        </div>
-      </div>
-      <br /> -->
       <!-------------- Submit Button----------- -->
       <div class="row">
         <div class="col-12">
-          <button pButton type="submit" label="Sign In" class="btn btn-primary btn-block"
+          <button pButton type="submit" [disabled]="loginForm.invalid" label="Sign In" class="btn btn-primary btn-block"
             (click)="sendData(data)"></button>
         </div>
       </div>

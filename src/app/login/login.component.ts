@@ -9,29 +9,25 @@ import { ServiceService } from '../services/service.service'
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  constructor(private router: Router, private notification: ServiceService) {}
+  constructor(private router: Router, private notification: ServiceService) { }
   Name: string | undefined
-  lastName: string | undefined
+  password1: string | undefined
 
   loginForm = new FormGroup({
-    fName: new FormControl('', [
+    userName: new FormControl('', [
       Validators.required,
-      Validators.pattern('^[a-zA-Z]+$'),
+      Validators.minLength(4),
     ]),
-    lName: new FormControl('', [Validators.required]),
-    mobileNo: new FormControl('', [
+    password: new FormControl('', [
       Validators.required,
-      Validators.pattern('^[0-9]{10}$'),
-    ]),
+      Validators.minLength(4),]),
+
   })
-  get fName() {
-    return this.loginForm.get('fName')
+  get userName() {
+    return this.loginForm.get('userName')
   }
-  get lName() {
-    return this.loginForm.get('lName')
-  }
-  get mobileNo() {
-    return this.loginForm.get('mobileNo')
+  get password() {
+    return this.loginForm.get('password')
   }
   onSubmit() {
     console.log()

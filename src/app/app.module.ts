@@ -14,8 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 // import { AuthGuard } from './auth.guard'
 import { ButtonModule } from 'primeng/button';
 import { PasswordModule } from 'primeng/password';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { PrimeIcons } from 'primeng/api';
+import { DashboardComponent } from './Dashboard/dashboard.component';
+import { ConfirmationService, PrimeIcons } from 'primeng/api';
 import { DialogModule } from 'primeng/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaginatorModule } from 'primeng/paginator';
@@ -23,9 +23,11 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { InputTextModule } from 'primeng/inputtext';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { TooltipModule } from 'primeng/tooltip';
+import { MessagesModule } from 'primeng/messages';
+import { DialogBoxComponent } from './dialog-box/dialog-box.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, DashboardComponent],
+  declarations: [AppComponent, LoginComponent, DashboardComponent, DialogBoxComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -45,8 +47,11 @@ import { TooltipModule } from 'primeng/tooltip';
     Ng2SearchPipeModule,
     ConfirmDialogModule,
     TooltipModule,
+    MessagesModule
+
+
   ],
-  providers: [ServiceService, PrimeIcons],
+  providers: [ServiceService, PrimeIcons, ConfirmationService],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

@@ -8,7 +8,7 @@ export class ServiceService {
   public notificationSubject = new BehaviorSubject('')
   public userDataSubject = new BehaviorSubject('')
 
-  constructor() {}
+  constructor() { }
   sendNotification(data: any) {
     this.notificationSubject.next(data)
     console.log('service:-', data)

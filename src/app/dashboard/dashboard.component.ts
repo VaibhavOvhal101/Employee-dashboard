@@ -5,6 +5,10 @@ import { HttpClient } from '@angular/common/http';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ServiceService } from '../services/service.service';
 import { ConfirmationService } from 'primeng/api'
+import { Router } from '@angular/router';
+import { DialogService } from 'primeng/dynamicdialog';
+import { DialogBoxComponent } from '../dialog-box/dialog-box.component';
+import { DynamicDialogRef } from 'primeng/dynamicdialog';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,7 +16,6 @@ import { ConfirmationService } from 'primeng/api'
   styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent {
-  notificationMessage: any = ''
   Users = [];
   empList: any;
   value3: any;
@@ -28,13 +31,18 @@ export class DashboardComponent {
   saveBtn: boolean
   dialogLabel = "Add New Employee";
   messages: any
+  showDialog: boolean;
+
 
   constructor(
     private empService: EmpTableService,
     private http: HttpClient,
-    private dialog: ConfirmDialogModule,
-    private notification: ServiceService,
-    private popup: ConfirmationService
+    // private dialog: ConfirmDialogModule,
+    // private notification: ServiceService,
+    // private popup: ConfirmationService,
+    // private route: Router,
+    private dialogBox: DialogService,
+
   ) { }
 
   // ---------------Employee list From Json.DB------------------
@@ -87,8 +95,11 @@ export class DashboardComponent {
       });
   }
   showBasicDialog() {
-    this.visible = true;
-    // window.location.reload()
+    const ref = this.dialogBox.open(DialogBoxComponent, {
+      header: 'Add employee',
+      width: '40%',
+    }
+    );
   }
   onPageChange(event: any) {
     this.first = event.first;
@@ -129,10 +140,9 @@ export class DashboardComponent {
       this.visible = false;
     })
   }
-  resetValue() {
-    this.dialogForm.reset();
-    // this.onEdit.reset();
-  }
+  // resetValue() {
+  //   this.showDialog = false
+  // }
   // -----------------------Delete-------------------
   onDelete(id) {
     if (confirm("Are you sure want to delete?")) {

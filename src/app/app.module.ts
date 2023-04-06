@@ -25,9 +25,14 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { TooltipModule } from 'primeng/tooltip';
 import { MessagesModule } from 'primeng/messages';
 import { DialogBoxComponent } from './dialog-box/dialog-box.component';
+import { DialogService, DynamicDialogModule, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { SidebarModule } from 'primeng/sidebar';
+import { NavbarComponent } from './navbar/navbar.component';
+
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, DashboardComponent, DialogBoxComponent],
+  declarations: [AppComponent, LoginComponent, DashboardComponent, DialogBoxComponent, SidebarComponent, NavbarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -47,11 +52,11 @@ import { DialogBoxComponent } from './dialog-box/dialog-box.component';
     Ng2SearchPipeModule,
     ConfirmDialogModule,
     TooltipModule,
-    MessagesModule
-
-
+    MessagesModule,
+    DynamicDialogModule,
+    SidebarModule,
   ],
-  providers: [ServiceService, PrimeIcons, ConfirmationService],
+  providers: [ServiceService, PrimeIcons, ConfirmationService, DialogService, DynamicDialogRef,],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

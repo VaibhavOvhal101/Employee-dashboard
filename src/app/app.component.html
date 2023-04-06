@@ -1,4 +1,12 @@
 <!-- <app-login></app-login>
 <app-main></app-main> -->
-<!-- <app-dashboard></app-dashboard> -->
-<router-outlet></router-outlet>
+<!-- <app-navbar></app-navbar>
+<app-sidebar></app-sidebar> -->
+
+
+<router-outlet>
+    <div class="d-flex">
+        <app-sidebar></app-sidebar>
+        <app-navbar class="flex-grow-1"></app-navbar>
+    </div>
+</router-outlet>

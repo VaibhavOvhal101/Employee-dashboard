@@ -33,8 +33,8 @@ export class LoginComponent {
     console.log()
   }
   sendData(message: { value: unknown }) {
-    this.notification.sendNotification(message.value)
-    this.notification.sendUsrData(this.loginForm.value)
+    // this.notification.sendNotification(message.value)
+    // this.notification.sendUsrData(this.loginForm.value)
     console.log(this.loginForm.value)
     this.router.navigate(['/dashboard'])
   }

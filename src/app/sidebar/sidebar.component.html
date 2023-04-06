@@ -1,0 +1,31 @@
+<!-- <p-sidebar [(visible)]="sidebarVisible" styleClass="w-12rem">
+    <h5 class="">Employee Dashboard</h5>
+    <div class=" position-sticky sidebar">
+        <div class="list-group list-group-flush">
+            <a href="#" class="list-group-item list-group-item-action py-2 ripple active" aria-current="true">
+                <i class="pi pi-microsoft mr-2"></i><span>Dashboard</span>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action ">
+                <i class="pi pi-user mr-2"></i><span>Login</span>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action py-2"><i
+                    class="pi pi-lock mr-2"></i><span>Password</span></a>
+        </div>
+    </div>
+
+</p-sidebar>
+<p-button (click)="sidebarVisible = true" class="p-button-secondary"><i class="fa-solid fa-bars"></i></p-button> -->
+
+
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn " (click)="closeNav()"><i class="pi pi-times"
+            style="color: #F59E0B;"></i></a>
+    <a href="#">Employee </a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+</div>
+<div id="main">
+    <button class="openbtn" (click)="openNav()"><i class="pi pi-angle-double-right"
+            style="color: #F59E0B; font-weight: 800; font-size: 30px;;"></i></button>
+</div>

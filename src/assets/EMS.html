@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://localhost:4200/dashboard -->
+<html lang="en"><plasmo-csui></plasmo-csui><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>EMS</title>
+  <!--<base href="/">--><base href=".">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="./EMS_files/logo.png">
+  <link rel="stylesheet" href="./EMS_files/primeflex.css">
+  <link rel="stylesheet" href="./EMS_files/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./EMS_files/css2" rel="stylesheet">
+<link rel="stylesheet" href="./EMS_files/styles.css"><style>
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */</style><style>.max-container[_ngcontent-xik-c95] {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.main[_ngcontent-xik-c95] {
+  background-color: #d9e4dd;
+  border: none;
+  
+}
+
+i[_ngcontent-xik-c95] {
+  cursor: pointer;
+  
+}
+.searchbox[_ngcontent-xik-c95] {
+  margin-left: 16px;
+}
+.icons[_ngcontent-xik-c95] {
+  margin: 0 10px;
+}
+.hButton[_ngcontent-xik-c95] {
+  margin: 0 5px;
+}
+.navStyle[_ngcontent-xik-c95] {
+  background-color: #020c22;
+  border-bottom: solid 2px #f59e0b;
+}
+.heading[_ngcontent-xik-c95] {
+  font-family: 'Metrophobic', sans-serif;
+}
+.logoutHover[_ngcontent-xik-c95] {
+  cursor: pointer;
+  text-decoration: none;
+}
+.logoutHover[_ngcontent-xik-c95]:hover {
+  color: #f59e0b !important;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvRGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsaUJBQWlCO0VBQ2pCLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSx5QkFBeUI7RUFDekIsWUFBWTtFQUNaLHNCQUFzQjtBQUN4QjtBQUNBOztHQUVHO0FBQ0g7RUFDRSxlQUFlO0VBQ2Ysb0JBQW9CO0FBQ3RCO0FBQ0E7RUFDRSxpQkFBaUI7QUFDbkI7QUFDQTtFQUNFLGNBQWM7QUFDaEI7QUFDQTtFQUNFLGFBQWE7QUFDZjtBQUNBO0VBQ0UseUJBQXlCO0VBQ3pCLGdDQUFnQztBQUNsQztBQUNBO0VBQ0Usc0NBQXNDO0FBQ3hDO0FBQ0E7RUFDRSxlQUFlO0VBQ2YscUJBQXFCO0FBQ3ZCO0FBQ0E7RUFDRSx5QkFBeUI7QUFDM0IiLCJzb3VyY2VzQ29udGVudCI6WyIubWF4LWNvbnRhaW5lciB7XHJcbiAgbWF4LXdpZHRoOiAxMjgwcHg7XHJcbiAgbWFyZ2luOiAwIGF1dG87XHJcbn1cclxuXHJcbi5tYWluIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZDllNGRkO1xyXG4gIGJvcmRlcjogbm9uZTtcclxuICAvKiBtYXJnaW4tdG9wOiAyMHB4OyAqL1xyXG59XHJcbi8qIGk6aG92ZXIge1xyXG4gIGNvbG9yOiAjZjU5ZTBiO1xyXG59ICovXHJcbmkge1xyXG4gIGN1cnNvcjogcG9pbnRlcjtcclxuICAvKiBtYXJnaW46IDAgMTBweDsgKi9cclxufVxyXG4uc2VhcmNoYm94IHtcclxuICBtYXJnaW4tbGVmdDogMTZweDtcclxufVxyXG4uaWNvbnMge1xyXG4gIG1hcmdpbjogMCAxMHB4O1xyXG59XHJcbi5oQnV0dG9uIHtcclxuICBtYXJnaW46IDAgNXB4O1xyXG59XHJcbi5uYXZTdHlsZSB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogIzAyMGMyMjtcclxuICBib3JkZXItYm90dG9tOiBzb2xpZCAycHggI2Y1OWUwYjtcclxufVxyXG4uaGVhZGluZyB7XHJcbiAgZm9udC1mYW1pbHk6ICdNZXRyb3Bob2JpYycsIHNhbnMtc2VyaWY7XHJcbn1cclxuLmxvZ291dEhvdmVyIHtcclxuICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xyXG59XHJcbi5sb2dvdXRIb3Zlcjpob3ZlciB7XHJcbiAgY29sb3I6ICNmNTllMGIgIWltcG9ydGFudDtcclxufVxyXG4iXSwic291cmNlUm9vdCI6IiJ9 */</style><style>.p-datatable{position:relative}.p-datatable>.p-datatable-wrapper{overflow:auto}.p-datatable-table{border-spacing:0px;width:100%}.p-datatable .p-sortable-column{cursor:pointer;-webkit-user-select:none;user-select:none}.p-datatable .p-sortable-column .p-column-title,.p-datatable .p-sortable-column .p-sortable-column-icon,.p-datatable .p-sortable-column .p-sortable-column-badge{vertical-align:middle}.p-datatable .p-sortable-column .p-sortable-column-badge{display:inline-flex;align-items:center;justify-content:center}.p-datatable-hoverable-rows .p-selectable-row{cursor:pointer}.p-datatable-scrollable>.p-datatable-wrapper{position:relative}.p-datatable-scrollable-table>.p-datatable-thead{position:sticky;top:0;z-index:1}.p-datatable-scrollable-table>.p-datatable-frozen-tbody{position:sticky;z-index:1}.p-datatable-scrollable-table>.p-datatable-tfoot{position:sticky;bottom:0;z-index:1}.p-datatable-scrollable .p-frozen-column{position:sticky;background:inherit}.p-datatable-scrollable th.p-frozen-column{z-index:1}.p-datatable-flex-scrollable{display:flex;flex-direction:column;height:100%}.p-datatable-flex-scrollable>.p-datatable-wrapper{display:flex;flex-direction:column;flex:1;height:100%}.p-datatable-scrollable-table>.p-datatable-tbody>.p-rowgroup-header{position:sticky;z-index:1}.p-datatable-resizable-table>.p-datatable-thead>tr>th,.p-datatable-resizable-table>.p-datatable-tfoot>tr>td,.p-datatable-resizable-table>.p-datatable-tbody>tr>td{overflow:hidden;white-space:nowrap}.p-datatable-resizable-table>.p-datatable-thead>tr>th.p-resizable-column:not(.p-frozen-column){background-clip:padding-box;position:relative}.p-datatable-resizable-table-fit>.p-datatable-thead>tr>th.p-resizable-column:last-child .p-column-resizer{display:none}.p-datatable .p-column-resizer{display:block;position:absolute!important;top:0;right:0;margin:0;width:.5rem;height:100%;padding:0;cursor:col-resize;border:1px solid transparent}.p-datatable .p-column-resizer-helper{width:1px;position:absolute;z-index:10;display:none}.p-datatable .p-row-editor-init,.p-datatable .p-row-editor-save,.p-datatable .p-row-editor-cancel,.p-datatable .p-row-toggler{display:inline-flex;align-items:center;justify-content:center;overflow:hidden;position:relative}.p-datatable-reorder-indicator-up,.p-datatable-reorder-indicator-down{position:absolute}.p-datatable-reorderablerow-handle,[pReorderableColumn]{cursor:move}.p-datatable .p-datatable-loading-overlay{position:absolute;display:flex;align-items:center;justify-content:center;z-index:2}.p-column-filter-row{display:flex;align-items:center;width:100%}.p-column-filter-menu{display:inline-flex}.p-column-filter-row p-columnfilterformelement{flex:1 1 auto;width:1%}.p-column-filter-menu-button,.p-column-filter-clear-button{display:inline-flex;justify-content:center;align-items:center;cursor:pointer;text-decoration:none;overflow:hidden;position:relative}.p-column-filter-overlay{position:absolute;top:0;left:0}.p-column-filter-row-items{margin:0;padding:0;list-style:none}.p-column-filter-row-item{cursor:pointer}.p-column-filter-add-button,.p-column-filter-remove-button{justify-content:center}.p-column-filter-add-button .p-button-label,.p-column-filter-remove-button .p-button-label{flex-grow:0}.p-column-filter-buttonbar{display:flex;align-items:center;justify-content:space-between}.p-column-filter-buttonbar .p-button{width:auto}.p-datatable-tbody>tr>td>.p-column-title{display:none}.p-datatable-scroller-spacer{display:flex}.p-datatable .p-scroller .p-scroller-loading{transform:none!important;min-height:0;position:sticky;top:0;left:0}
+</style><style>.p-paginator{display:flex;align-items:center;justify-content:center;flex-wrap:wrap}.p-paginator-left-content{margin-right:auto}.p-paginator-right-content{margin-left:auto}.p-paginator-page,.p-paginator-next,.p-paginator-last,.p-paginator-first,.p-paginator-prev,.p-paginator-current{cursor:pointer;display:inline-flex;align-items:center;justify-content:center;line-height:1;-webkit-user-select:none;user-select:none;overflow:hidden;position:relative}.p-paginator-element:focus{z-index:1;position:relative}
+</style><style>.p-dropdown{display:inline-flex;cursor:pointer;position:relative;-webkit-user-select:none;user-select:none}.p-dropdown-clear-icon{position:absolute;top:50%;margin-top:-.5rem}.p-dropdown-trigger{display:flex;align-items:center;justify-content:center;flex-shrink:0}.p-dropdown-label{display:block;white-space:nowrap;overflow:hidden;flex:1 1 auto;width:1%;text-overflow:ellipsis;cursor:pointer}.p-dropdown-label-empty{overflow:hidden;visibility:hidden}input.p-dropdown-label{cursor:default}.p-dropdown-items-wrapper{overflow:auto}.p-dropdown-item{cursor:pointer;font-weight:400;white-space:nowrap;position:relative;overflow:hidden}.p-dropdown-items{margin:0;padding:0;list-style-type:none}.p-dropdown-filter{width:100%}.p-dropdown-filter-container{position:relative}.p-dropdown-filter-icon{position:absolute;top:50%;margin-top:-.5rem}.p-fluid .p-dropdown{display:flex}.p-fluid .p-dropdown .p-dropdown-label{width:1%}
+</style><style>.p-overlay{position:absolute;top:0;left:0}.p-overlay-modal{display:flex;align-items:center;justify-content:center;position:fixed;top:0;left:0;width:100%;height:100%}.p-overlay-content{transform-origin:inherit}.p-overlay-modal>.p-overlay-content{z-index:1;width:90%}.p-overlay-top{align-items:flex-start}.p-overlay-top-start{align-items:flex-start;justify-content:flex-start}.p-overlay-top-end{align-items:flex-start;justify-content:flex-end}.p-overlay-bottom{align-items:flex-end}.p-overlay-bottom-start{align-items:flex-end;justify-content:flex-start}.p-overlay-bottom-end{align-items:flex-end;justify-content:flex-end}.p-overlay-left{justify-content:flex-start}.p-overlay-left-start{justify-content:flex-start;align-items:flex-start}.p-overlay-left-end{justify-content:flex-start;align-items:flex-end}.p-overlay-right{justify-content:flex-end}.p-overlay-right-start{justify-content:flex-end;align-items:flex-start}.p-overlay-right-end{justify-content:flex-end;align-items:flex-end}
+</style><style>.p-dialog-mask{position:fixed;top:0;left:0;width:100%;height:100%;display:flex;justify-content:center;align-items:center;pointer-events:none}.p-dialog-mask.p-component-overlay{pointer-events:auto}.p-dialog{display:flex;flex-direction:column;pointer-events:auto;max-height:90%;transform:scale(1);position:relative}.p-dialog-content{overflow-y:auto;flex-grow:1}.p-dialog-header{display:flex;align-items:center;justify-content:space-between;flex-shrink:0}.p-dialog-draggable .p-dialog-header{cursor:move}.p-dialog-footer{flex-shrink:0}.p-dialog .p-dialog-header-icons{display:flex;align-items:center}.p-dialog .p-dialog-header-icon{display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}.p-fluid .p-dialog-footer .p-button{width:auto}.p-dialog-top .p-dialog,.p-dialog-bottom .p-dialog,.p-dialog-left .p-dialog,.p-dialog-right .p-dialog,.p-dialog-top-left .p-dialog,.p-dialog-top-right .p-dialog,.p-dialog-bottom-left .p-dialog,.p-dialog-bottom-right .p-dialog{margin:.75rem;transform:translateZ(0)}.p-dialog-maximized{transition:none;transform:none;width:100vw!important;height:100vh!important;top:0!important;left:0!important;max-height:100%;height:100%}.p-dialog-maximized .p-dialog-content{flex-grow:1}.p-dialog-left{justify-content:flex-start}.p-dialog-right{justify-content:flex-end}.p-dialog-top{align-items:flex-start}.p-dialog-top-left{justify-content:flex-start;align-items:flex-start}.p-dialog-top-right{justify-content:flex-end;align-items:flex-start}.p-dialog-bottom{align-items:flex-end}.p-dialog-bottom-left{justify-content:flex-start;align-items:flex-end}.p-dialog-bottom-right{justify-content:flex-end;align-items:flex-end}.p-dialog .p-resizable-handle{position:absolute;font-size:.1px;display:block;cursor:se-resize;width:12px;height:12px;right:1px;bottom:1px}.p-confirm-dialog .p-dialog-content{display:flex;align-items:center}
+</style><style>.p-message-wrapper{display:flex;align-items:center}.p-message-close{display:flex;align-items:center;justify-content:center}.p-message-close.p-link{margin-left:auto;overflow:hidden;position:relative}.p-messages .p-message.ng-animating{overflow:hidden}
+</style></head>
+
+<body>
+  <app-root _nghost-xik-c99="" ng-version="15.2.2"><router-outlet _ngcontent-xik-c99=""></router-outlet><app-dashboard _nghost-xik-c95="" class="ng-star-inserted"><nav _ngcontent-xik-c95="" class="navbar navbar-expand-lg navStyle"><div _ngcontent-xik-c95="" class="container-fluid"><div _ngcontent-xik-c95="" id="navbarSupportedContent" class="collapse navbar-collapse"><div _ngcontent-xik-c95="" class="navbar-brand mt-2 mt-lg-0"><img _ngcontent-xik-c95="" src="./EMS_files/logo.png" height="40" alt="Logo" loading="lazy"></div><div _ngcontent-xik-c95="" class="heading mt-2"><h4 _ngcontent-xik-c95="" style="color: #F59E0B; font-weight: bold;">Employee Managment System</h4></div></div><div _ngcontent-xik-c95="" class="d-flex align-items-center"><a _ngcontent-xik-c95="" routerlink="/login" class="text-white logoutHover" ng-reflect-router-link="/login" href="http://localhost:4200/login"> Logout <i _ngcontent-xik-c95="" class="pi pi-power-off" style="font-size: 12px;"></i></a></div></div></nav><div _ngcontent-xik-c95="" class="max-container main"><div _ngcontent-xik-c95="" class="col-12"><h4 _ngcontent-xik-c95="" class="ml-3 font-weight-bold">Employee List</h4><div _ngcontent-xik-c95="" class="d-flex justify-content-start"><div _ngcontent-xik-c95="" class="mt-2 searchbox"><span _ngcontent-xik-c95="" class="p-input-icon-right"><i _ngcontent-xik-c95="" class="pi pi-search"></i><input _ngcontent-xik-c95="" type="text" pinputtext="" placeholder="Search" class="p-inputtext p-component p-element pInputtext-lg form-control ng-untouched ng-pristine ng-valid"></span></div><div _ngcontent-xik-c95="" class="ml-auto p-2"><p-button _ngcontent-xik-c95="" styleclass="p-button-warning mr-2" icon="pi pi-user-plus" label="Add New" class="p-element" ng-reflect-style-class="p-button-warning mr-2" ng-reflect-icon="pi pi-user-plus" ng-reflect-label="Add New"><button pripple="" class="p-ripple p-element p-button-warning mr-2 p-button p-component" ng-reflect-ng-class="[object Object]" type="button"><!--bindings={}--><span ng-reflect-ng-class="[object Object]" aria-hidden="true" class="pi pi-user-plus p-button-icon p-button-icon-left ng-star-inserted"></span><!--bindings={
+  "ng-reflect-ng-if": "pi pi-user-plus"
+}--><span class="p-button-label ng-star-inserted" aria-hidden="false">Add New</span><!--bindings={
+  "ng-reflect-ng-if": "Add New"
+}--><!--bindings={}--></button></p-button></div></div><div _ngcontent-xik-c95="" class="col"><p-table _ngcontent-xik-c95="" styleclass="p-datatable-gridlines p-datatable-striped" class="p-element" ng-reflect-style-class="p-datatable-gridlines p-datata" ng-reflect-paginator="true" ng-reflect-rows="10" ng-reflect-rows-per-page-options="10,15,20" ng-reflect-global-filter-fields="Name,mobile,Address,Age" ng-reflect-value="[object Object],[object Object"><div ng-reflect-ng-class="[object Object]" id="pr_id_1" class="p-datatable-gridlines p-datatable-striped p-datatable p-component"><!--bindings={}--><!--bindings={}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><div class="p-datatable-wrapper" ng-reflect-ng-style="[object Object]"><!--bindings={}--><table role="table" ng-reflect-ng-class="[object Object]" id="pr_id_1-table" class="p-datatable-table ng-star-inserted"><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--><thead class="p-datatable-thead"><tr _ngcontent-xik-c95="" class="ng-star-inserted"><th _ngcontent-xik-c95="" psortablecolumn="Name" class="p-element p-sortable-column" ng-reflect-field="Name" tabindex="0" role="columnheader" aria-sort="none">Name<p-sorticon _ngcontent-xik-c95="" field="code" class="p-element" ng-reflect-field="code"><i class="p-sortable-column-icon pi pi-fw pi-sort-alt" ng-reflect-ng-class="[object Object]"></i><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></p-sorticon></th><th _ngcontent-xik-c95="">Mobile</th><th _ngcontent-xik-c95="" psortablecolumn="Address" class="p-element p-sortable-column" ng-reflect-field="Address" tabindex="0" role="columnheader" aria-sort="none">Address<p-sorticon _ngcontent-xik-c95="" field="code" class="p-element" ng-reflect-field="code"><i class="p-sortable-column-icon pi pi-fw pi-sort-alt" ng-reflect-ng-class="[object Object]"></i><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></p-sorticon></th><th _ngcontent-xik-c95="" psortablecolumn="Age" class="p-element p-sortable-column" ng-reflect-field="Age" tabindex="0" role="columnheader" aria-sort="none">Age<p-sorticon _ngcontent-xik-c95="" field="code" class="p-element" ng-reflect-field="code"><i class="p-sortable-column-icon pi pi-fw pi-sort-alt" ng-reflect-ng-class="[object Object]"></i><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></p-sorticon></th><th _ngcontent-xik-c95="">Actions</th></tr><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--></thead><!--bindings={}--><tbody class="p-element p-datatable-tbody" ng-reflect-value="[object Object],[object Object" ng-reflect-template="[object Object]" ng-reflect-scroller-options="[object Object]"><!--bindings={}--><tr _ngcontent-xik-c95="" class="font-weight-bold ng-star-inserted"><td _ngcontent-xik-c95="">Rio</td><td _ngcontent-xik-c95="">8668029222</td><td _ngcontent-xik-c95="">Dubai</td><td _ngcontent-xik-c95="">35 Years</td><td _ngcontent-xik-c95=""><i _ngcontent-xik-c95="" ptooltip="Edit" tooltipposition="top" class="p-element pi pi-pencil icons" style="color: #28a745; font-size: 20px;" ng-reflect-text="Edit" ng-reflect-tooltip-position="top"></i><p-confirmdialog _ngcontent-xik-c95="" class="p-element ng-tns-c57-1 ng-star-inserted"><!--bindings={}--></p-confirmdialog><i _ngcontent-xik-c95="" ptool="" tip="Delete" tooltipposition="top" class="pi pi-trash icons" style="color: #dc3545; font-size: 20px;"></i><p-messages _ngcontent-xik-c95="" class="p-element ng-tns-c94-2 ng-star-inserted" ng-reflect-enable-service="false" ng-reflect-closable="false"><div role="alert" class="p-messages p-component ng-tns-c94-2"><!--bindings={}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if-else": "[object Object]"
+}--><!--container--></div></p-messages></td></tr><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={}--><!--bindings={}--><tr _ngcontent-xik-c95="" class="font-weight-bold ng-star-inserted"><td _ngcontent-xik-c95="">Alex</td><td _ngcontent-xik-c95="">9547956637</td><td _ngcontent-xik-c95="">Solapur</td><td _ngcontent-xik-c95="">20 Years</td><td _ngcontent-xik-c95=""><i _ngcontent-xik-c95="" ptooltip="Edit" tooltipposition="top" class="p-element pi pi-pencil icons" style="color: #28a745; font-size: 20px;" ng-reflect-text="Edit" ng-reflect-tooltip-position="top"></i><p-confirmdialog _ngcontent-xik-c95="" class="p-element ng-tns-c57-3 ng-star-inserted"><!--bindings={}--></p-confirmdialog><i _ngcontent-xik-c95="" ptool="" tip="Delete" tooltipposition="top" class="pi pi-trash icons" style="color: #dc3545; font-size: 20px;"></i><p-messages _ngcontent-xik-c95="" class="p-element ng-tns-c94-4 ng-star-inserted" ng-reflect-enable-service="false" ng-reflect-closable="false"><div role="alert" class="p-messages p-component ng-tns-c94-4"><!--bindings={}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if-else": "[object Object]"
+}--><!--container--></div></p-messages></td></tr><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={}--><!--bindings={}--><tr _ngcontent-xik-c95="" class="font-weight-bold ng-star-inserted"><td _ngcontent-xik-c95="">Richie</td><td _ngcontent-xik-c95="">9563899281</td><td _ngcontent-xik-c95="">Benglore</td><td _ngcontent-xik-c95="">32 Years</td><td _ngcontent-xik-c95=""><i _ngcontent-xik-c95="" ptooltip="Edit" tooltipposition="top" class="p-element pi pi-pencil icons" style="color: #28a745; font-size: 20px;" ng-reflect-text="Edit" ng-reflect-tooltip-position="top"></i><p-confirmdialog _ngcontent-xik-c95="" class="p-element ng-tns-c57-5 ng-star-inserted"><!--bindings={}--></p-confirmdialog><i _ngcontent-xik-c95="" ptool="" tip="Delete" tooltipposition="top" class="pi pi-trash icons" style="color: #dc3545; font-size: 20px;"></i><p-messages _ngcontent-xik-c95="" class="p-element ng-tns-c94-6 ng-star-inserted" ng-reflect-enable-service="false" ng-reflect-closable="false"><div role="alert" class="p-messages p-component ng-tns-c94-6"><!--bindings={}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if-else": "[object Object]"
+}--><!--container--></div></p-messages></td></tr><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={}--><!--bindings={}--><tr _ngcontent-xik-c95="" class="font-weight-bold ng-star-inserted"><td _ngcontent-xik-c95="">Kedar</td><td _ngcontent-xik-c95="">9755799230</td><td _ngcontent-xik-c95="">Pune</td><td _ngcontent-xik-c95="">22 Years</td><td _ngcontent-xik-c95=""><i _ngcontent-xik-c95="" ptooltip="Edit" tooltipposition="top" class="p-element pi pi-pencil icons" style="color: #28a745; font-size: 20px;" ng-reflect-text="Edit" ng-reflect-tooltip-position="top"></i><p-confirmdialog _ngcontent-xik-c95="" class="p-element ng-tns-c57-7 ng-star-inserted"><!--bindings={}--></p-confirmdialog><i _ngcontent-xik-c95="" ptool="" tip="Delete" tooltipposition="top" class="pi pi-trash icons" style="color: #dc3545; font-size: 20px;"></i><p-messages _ngcontent-xik-c95="" class="p-element ng-tns-c94-8 ng-star-inserted" ng-reflect-enable-service="false" ng-reflect-closable="false"><div role="alert" class="p-messages p-component ng-tns-c94-8"><!--bindings={}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if-else": "[object Object]"
+}--><!--container--></div></p-messages></td></tr><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={}--><!--bindings={}--><tr _ngcontent-xik-c95="" class="font-weight-bold ng-star-inserted"><td _ngcontent-xik-c95="">Tushar</td><td _ngcontent-xik-c95="">9076358822</td><td _ngcontent-xik-c95="">Satara</td><td _ngcontent-xik-c95="">45 Years</td><td _ngcontent-xik-c95=""><i _ngcontent-xik-c95="" ptooltip="Edit" tooltipposition="top" class="p-element pi pi-pencil icons" style="color: #28a745; font-size: 20px;" ng-reflect-text="Edit" ng-reflect-tooltip-position="top"></i><p-confirmdialog _ngcontent-xik-c95="" class="p-element ng-tns-c57-9 ng-star-inserted"><!--bindings={}--></p-confirmdialog><i _ngcontent-xik-c95="" ptool="" tip="Delete" tooltipposition="top" class="pi pi-trash icons" style="color: #dc3545; font-size: 20px;"></i><p-messages _ngcontent-xik-c95="" class="p-element ng-tns-c94-10 ng-star-inserted" ng-reflect-enable-service="false" ng-reflect-closable="false"><div role="alert" class="p-messages p-component ng-tns-c94-10"><!--bindings={}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if-else": "[object Object]"
+}--><!--container--></div></p-messages></td></tr><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={}--><!--bindings={}--><tr _ngcontent-xik-c95="" class="font-weight-bold ng-star-inserted"><td _ngcontent-xik-c95="">Amol</td><td _ngcontent-xik-c95="">9677828624</td><td _ngcontent-xik-c95="">Surat</td><td _ngcontent-xik-c95="">22 Years</td><td _ngcontent-xik-c95=""><i _ngcontent-xik-c95="" ptooltip="Edit" tooltipposition="top" class="p-element pi pi-pencil icons" style="color: #28a745; font-size: 20px;" ng-reflect-text="Edit" ng-reflect-tooltip-position="top"></i><p-confirmdialog _ngcontent-xik-c95="" class="p-element ng-tns-c57-11 ng-star-inserted"><!--bindings={}--></p-confirmdialog><i _ngcontent-xik-c95="" ptool="" tip="Delete" tooltipposition="top" class="pi pi-trash icons" style="color: #dc3545; font-size: 20px;"></i><p-messages _ngcontent-xik-c95="" class="p-element ng-tns-c94-12 ng-star-inserted" ng-reflect-enable-service="false" ng-reflect-closable="false"><div role="alert" class="p-messages p-component ng-tns-c94-12"><!--bindings={}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if-else": "[object Object]"
+}--><!--container--></div></p-messages></td></tr><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={}--><!--bindings={}--><tr _ngcontent-xik-c95="" class="font-weight-bold ng-star-inserted"><td _ngcontent-xik-c95="">Vaibhav</td><td _ngcontent-xik-c95="">8877784885</td><td _ngcontent-xik-c95="">Pune</td><td _ngcontent-xik-c95="">23 Years</td><td _ngcontent-xik-c95=""><i _ngcontent-xik-c95="" ptooltip="Edit" tooltipposition="top" class="p-element pi pi-pencil icons" style="color: #28a745; font-size: 20px;" ng-reflect-text="Edit" ng-reflect-tooltip-position="top"></i><p-confirmdialog _ngcontent-xik-c95="" class="p-element ng-tns-c57-13 ng-star-inserted"><!--bindings={}--></p-confirmdialog><i _ngcontent-xik-c95="" ptool="" tip="Delete" tooltipposition="top" class="pi pi-trash icons" style="color: #dc3545; font-size: 20px;"></i><p-messages _ngcontent-xik-c95="" class="p-element ng-tns-c94-14 ng-star-inserted" ng-reflect-enable-service="false" ng-reflect-closable="false"><div role="alert" class="p-messages p-component ng-tns-c94-14"><!--bindings={}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if-else": "[object Object]"
+}--><!--container--></div></p-messages></td></tr><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={}--><!--bindings={
+  "ng-reflect-ng-for-of": "[object Object],[object Object"
+}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={}--><!--bindings={}--><!--bindings={}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></tbody><!--bindings={}--><!--bindings={}--></table><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--><!--ng-container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--container--></div><p-paginator styleclass="p-paginator-bottom" class="p-element ng-star-inserted" ng-reflect-style-class="p-paginator-bottom" ng-reflect-rows="10" ng-reflect-first="0" ng-reflect-total-records="7" ng-reflect-page-link-size="5" ng-reflect-always-show="true" ng-reflect-rows-per-page-options="10,15,20" ng-reflect-dropdown-scroll-height="200px" ng-reflect-current-page-report-template="{currentPage} of {totalPages}" ng-reflect-show-first-last-icon="true" ng-reflect-show-page-links="true"><div ng-reflect-ng-class="p-paginator p-component" class="p-paginator-bottom p-paginator p-component ng-star-inserted"><!--bindings={}--><!--bindings={}--><button type="button" pripple="" class="p-ripple p-element p-paginator-first p-paginator-element p-link p-disabled ng-star-inserted" disabled="" ng-reflect-ng-class="[object Object]"><span class="p-paginator-icon pi pi-angle-double-left"></span></button><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><button type="button" pripple="" class="p-ripple p-element p-paginator-prev p-paginator-element p-link p-disabled" disabled="" ng-reflect-ng-class="[object Object]"><span class="p-paginator-icon pi pi-angle-left"></span></button><span class="p-paginator-pages ng-star-inserted"><button type="button" pripple="" class="p-ripple p-element p-paginator-page p-paginator-element p-link p-highlight ng-star-inserted" ng-reflect-ng-class="[object Object]"> 1 </button><!--bindings={
+  "ng-reflect-ng-for-of": "1"
+}--></span><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={}--><button type="button" pripple="" class="p-ripple p-element p-paginator-next p-paginator-element p-link p-disabled" disabled="" ng-reflect-ng-class="[object Object]"><span class="p-paginator-icon pi pi-angle-right"></span></button><button type="button" pripple="" class="p-ripple p-element p-paginator-last p-paginator-element p-link p-disabled ng-star-inserted" disabled="" ng-reflect-ng-class="[object Object]"><span class="p-paginator-icon pi pi-angle-double-right"></span></button><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={}--><p-dropdown styleclass="p-paginator-rpp-options" class="p-element p-inputwrapper p-inputwrapper-filled ng-untouched ng-pristine ng-star-inserted ng-valid" ng-reflect-style-class="p-paginator-rpp-options" ng-reflect-options="[object Object],[object Object" ng-reflect-model="10" ng-reflect-disabled="false" ng-reflect-is-disabled="false" ng-reflect-scroll-height="200px"><div ng-reflect-ng-class="[object Object]" class="p-paginator-rpp-options p-dropdown p-component"><div class="p-hidden-accessible"><input type="text" readonly="" aria-haspopup="listbox" pautofocus="" role="combobox" class="p-element" aria-expanded="false"></div><span class="p-element p-dropdown-label p-inputtext ng-star-inserted" ng-reflect-ng-class="[object Object]" ng-reflect-text="" ng-reflect-tooltip-position="right" ng-reflect-position-style="absolute" id="pr_id_2_label">10<!--ng-container--><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-template-outlet-context": "[object Object]"
+}--></span><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--><!--bindings={}--><!--bindings={}--><div role="button" aria-label="dropdown trigger" aria-haspopup="listbox" class="p-dropdown-trigger"><span class="p-dropdown-trigger-icon pi pi-chevron-down" ng-reflect-ng-class="pi pi-chevron-down"></span></div><p-overlay class="p-element ng-tns-c60-0 ng-star-inserted" ng-reflect-target="@parent"><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></p-overlay></div></p-dropdown><!--bindings={
+  "ng-reflect-ng-if": "10,15,20"
+}--><!--bindings={}--></div><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--></p-paginator><!--bindings={
+  "ng-reflect-ng-if": "true"
+}--><!--bindings={}--><!--bindings={}--><!--bindings={}--><!--bindings={}--></div></p-table></div></div></div></app-dashboard><!--container--></app-root>
+<script src="./EMS_files/runtime.js.download" type="module"></script><script src="./EMS_files/polyfills.js.download" type="module"></script><script src="./EMS_files/styles.js.download" defer=""></script><script src="./EMS_files/vendor.js.download" type="module"></script><script src="./EMS_files/main.js.download" type="module"></script>
+
+<div class="ai-modal-container" style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Noto Sans&quot;, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;; line-height: 18px;"></div></body></html>

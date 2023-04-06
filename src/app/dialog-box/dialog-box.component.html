@@ -1,1 +1,58 @@
-<p>dialog-box works!</p>
+<!-------------- Form  ------------------>
+
+<form [formGroup]="dialogForm" (ngSubmit)="displayResponsive(dialogForm)">
+
+    <!-------------- Name Input ------------------>
+
+    <div class="form-outline mb-4">
+        <label class="form-label font-weight-bold" for="form3Example1cg">
+            Your Name<span class="text-danger">*</span>
+        </label>
+        <input type="text" id="form3Example1cg" class="form-control form-control-lg" formControlName="Name" />
+        <div class="alert alert-danger" style="font-size: 12px;" *ngIf="Name && Name.invalid && Name.touched">
+            *This field is reqiured
+        </div>
+    </div>
+    <!-------------- Mobile Number Input ------------------>
+    <div class="form-outline mb-4">
+        <label class="form-label font-weight-bold" for="form3Example3cg">
+            Mobile Number<span class="text-danger">*</span>
+        </label>
+        <input type="tel" id="form3Example3cg" class="form-control form-control-lg" formControlName="mobile" />
+        <div class="alert alert-danger" style="font-size: 12px;" *ngIf="mobile && mobile.invalid && mobile.touched">
+            *This field is reqiured
+        </div>
+    </div>
+    <!-------------- Address Input ------------------>
+    <div class="form-outline mb-4">
+        <label class="form-label font-weight-bold" for="form3Example4cg">
+            Address<span class="text-danger">*</span>
+        </label>
+        <input type="text" id="form3Example4cg" class="form-control form-control-lg" formControlName="Address" />
+        <div class="alert alert-danger" style="font-size: 12px;" *ngIf="Address && Address.invalid && Address.touched">
+            *This field is reqiured
+        </div>
+    </div>
+    <!-------------- Age Input ------------------>
+    <div class="form-outline mb-4">
+        <label class="form-label font-weight-bold" for="form3Example4cdg">
+            Age<span class="text-danger">*</span>
+        </label>
+        <input type="text" id="form3Example4cdg" class="form-control form-control-lg" formControlName="Age" />
+        <div class="alert alert-danger" style="font-size: 12px;" *ngIf="Age && Age.invalid && Age.touched">
+            *This field is reqiured
+        </div>
+        <br />
+        <div class="alert alert-danger" style="font-size: 12px;" *ngIf="Age.errors?.['maxlength']">
+            *Enter Valid Age
+        </div>
+    </div>
+    <!------------- Form Button -------------->
+    <p-button type="submit" [disabled]="dialogForm.invalid" class="hButton" *ngIf="saveBtn" label="Save"></p-button>
+    <p-button label="Update" [disabled]="dialogForm.invalid" class="hButton" (click)="update()" *ngIf="updateBtn"
+        styleClass="p-button-primary ml-1 "></p-button>
+    <p-button label="Close" (onClick)="resetValue()" (click)="visible = true"
+        styleClass="p-button-secondary"></p-button>
+
+</form>
+<!------------------ Dialog Button ----------------->

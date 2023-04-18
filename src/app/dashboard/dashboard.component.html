@@ -1,61 +1,100 @@
-<div class=" max-container main">
-  <!-- <! ---------------Search Box------------- -->
-  <div class="col-12 ">
-    <h4 class="ml-3 font-weight-bold heading">Employee List</h4>
-    <div class="d-flex justify-content-start">
-      <div class="mt-2 searchbox">
-        <span class="p-input-icon-right">
-          <i class="pi pi-search"></i>
-          <input type="text" class="pInputtext-lg form-control" pInputText placeholder="Search" [(ngModel)]="value3"
-            (input)="search.filterGlobal($any($event.target).value, 'contains')" />
-        </span>
-      </div>
-
-      <!---------- DialogeBox ------------->
-      <div class="ml-auto p-2">
-        <p-button (click)="showBasicDialog()" styleClass="p-button-warning mr-2" icon="pi pi-user-plus"
-          label="Add New"></p-button>
-      </div>
+<!-- <div class=" max-container main"> -->
+<!-- <! ---------------Search Box------------- -->
+<div class="col-12 main">
+  <h4 class="ml-3 font-weight-bold heading">Employee List</h4>
+  <div class="d-flex justify-content-start">
+    <div class="mt-2 searchbox">
+      <span class="p-input-icon-right">
+        <i class="pi pi-search"></i>
+        <input
+          type="text"
+          class="pInputtext-lg form-control"
+          pInputText
+          placeholder="Search"
+          [(ngModel)]="value3"
+          (input)="search.filterGlobal($any($event.target).value, 'contains')"
+        />
+      </span>
     </div>
-    <!------------------- Table----------- -->
-    <div class="col">
-      <p-table #search [value]="empList" styleClass="p-datatable-gridlines p-datatable-striped" [paginator]="true"
-        [rows]="10" [rowsPerPageOptions]="[10, 15, 20]" [globalFilterFields]="['Name', 'mobile', 'Address', 'Age']">
-        <ng-template pTemplate="header">
-          <tr>
-            <th pSortableColumn="Name">Name<p-sortIcon field="code"></p-sortIcon></th>
-            <th>Mobile</th>
-            <th pSortableColumn="Address">Address<p-sortIcon field="code"></p-sortIcon></th>
-            <th pSortableColumn="Age">Age<p-sortIcon field="code"></p-sortIcon></th>
-            <th>Actions</th>
-          </tr>
-        </ng-template>
-        <ng-template pTemplate="body" let-empList>
-          <tr class="font-weight-bold">
-            <td>{{ empList.Name }}</td>
-            <td>{{ empList.mobile }}</td>
-            <td>{{ empList.Address }}</td>
-            <td>{{ empList.Age + ' Years' }}</td>
-            <td>
-              <i class="pi pi-pencil icons" pTooltip="Edit" tooltipPosition="top" (click)="onEdit(empList.id)"
-                style="color: #28a745; font-size: 20px;"></i>
-              <p-confirmDialog [style]="{width: '30vw'}"></p-confirmDialog>
-              <i class="pi pi-trash icons" pTooltip="Delete" tooltipPosition="top" (click)="onDelete(empList.id)"
-                style="color: #dc3545; font-size: 20px;"></i>
-              <p-messages [(value)]="messages" [enableService]="false" [closable]="false"></p-messages>
 
-              <!-- <div class="card flex justify-content-center gap-2">
-              <p-button (click)="confirm" icon="pi pi-times" label="Delete" class="p-button-danger"></p-button>
-            </div> -->
-            </td>
-          </tr>
-        </ng-template>
-        <ng-template pTemplate="emptymessage">
-          <tr>
-            <td colspan="7">No Employee Found.</td>
-          </tr>
-        </ng-template>
-        <tr></tr>
-      </p-table>
+    <!---------- DialogeBox ------------->
+    <div class="ml-auto p-2">
+      <p-button
+        (click)="showBasicDialog()"
+        styleClass="p-button-warning mr-2 "
+        icon="pi pi-user-plus"
+        label="Add New"
+      ></p-button>
     </div>
   </div>
+
+  <!------------------- Table----------- -->
+  <div class="col">
+    <p-table
+      #search
+      [value]="empList"
+      styleClass="p-datatable-gridlines p-datatable-striped"
+      [paginator]="true"
+      [rows]="10"
+      [rowsPerPageOptions]="[10, 15, 20]"
+      paginatorPosition="bottom"
+      [globalFilterFields]="['Name', 'mobile', 'Address', 'Age']"
+    >
+      <ng-template pTemplate="header">
+        <tr>
+          <th pSortableColumn="Name">
+            Name<p-sortIcon field="code"></p-sortIcon>
+          </th>
+          <th>Mobile</th>
+          <th pSortableColumn="Address">
+            Address<p-sortIcon field="code"></p-sortIcon>
+          </th>
+          <th pSortableColumn="Age">
+            Age<p-sortIcon field="code"></p-sortIcon>
+          </th>
+          <th>Actions</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-empList>
+        <tr class="font-weight-bold">
+          <td>{{ empList.Name }}</td>
+          <td>{{ empList.mobile }}</td>
+          <td>{{ empList.Address }}</td>
+          <td>{{ empList.Age + " Years" }}</td>
+          <td>
+            <i
+              class="pi pi-pencil icons"
+              pTooltip="Edit"
+              tooltipPosition="top"
+              (click)="onEdit(empList.id)"
+              style="color: #28a745; font-size: 20px"
+            ></i>
+            <p-confirmDialog [style]="{ width: '30vw' }"></p-confirmDialog>
+            <i
+              class="pi pi-trash icons"
+              pTooltip="Delete"
+              tooltipPosition="top"
+              (click)="onDelete(empList.id)"
+              style="color: #dc3545; font-size: 20px"
+            ></i>
+            <p-messages
+              [(value)]="messages"
+              [enableService]="false"
+              [closable]="false"
+            ></p-messages>
+
+            <!-- <div class="card flex justify-content-center gap-2">
+              <p-button (click)="confirm" icon="pi pi-times" label="Delete" class="p-button-danger"></p-button>
+            </div> -->
+          </td>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td colspan="7">No Employee Found.</td>
+        </tr>
+      </ng-template>
+      <tr></tr>
+    </p-table>
+  </div>
+</div>

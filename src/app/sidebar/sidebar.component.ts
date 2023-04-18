@@ -1,25 +1,23 @@
-import { style, transition } from '@angular/animations';
-import { Component } from '@angular/core';
+import { animate, state, style, transition, trigger } from '@angular/animations';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.css']
+  styleUrls: ['./sidebar.component.css'],
+
 })
-export class SidebarComponent {
+export class SidebarComponent implements OnInit {
   sidebarVisible: boolean
+  bntStyle: string;
+  toggle: boolean = false;
+  rotate: boolean
 
-  /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
-  openNav(): void {
-    document.getElementById("mySidebar").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
+  ngOnInit(): void {
+    // var x = document.getElementById("mySidebar");
   }
-
-  /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
-  closeNav(): void {
-    document.getElementById("mySidebar").style.width = "0";
-
-    document.getElementById("main").style.marginLeft = "0";
+  openNav(): void {
+    this.toggle ? this.toggle = false : this.toggle = true;
   }
 
 }

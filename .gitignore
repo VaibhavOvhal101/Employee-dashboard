@@ -1,2 +1,4 @@
 /.angular
 angular.json
+node_modules
+dist

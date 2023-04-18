@@ -17,15 +17,16 @@
 <p-button (click)="sidebarVisible = true" class="p-button-secondary"><i class="fa-solid fa-bars"></i></p-button> -->
 
 
-<div id="mySidebar" class="sidebar">
-    <a href="javascript:void(0)" class="closebtn " (click)="closeNav()"><i class="pi pi-times"
-            style="color: #F59E0B;"></i></a>
-    <a href="#">Employee </a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
-</div>
-<div id="main">
-    <button class="openbtn" (click)="openNav()"><i class="pi pi-angle-double-right"
-            style="color: #F59E0B; font-weight: 800; font-size: 30px;;"></i></button>
+<div id="mySidebar" class="sidebar" [ngClass]=" toggle ? 'my_class1' : 'my_class2'">
+    <div class="test"> <button class="openbtn" (click)="openNav()"><i class="pi pi-angle-double-right"
+                style="color: #F59E0B; font-weight: 800; font-size: 30px;"></i></button>
+
+    </div>
+    <div class="mt-6 ">
+        <div class="parent mt-3"> <i class="pi pi-user" style="font-size: 2rem"></i><span class="ml-1">Employee</span>
+        </div>
+        <div class="parent"><i class="pi pi-cog" style="font-size: 2rem"></i><span class="ml-1">Services</span></div>
+        <div class="parent"><i class="pi pi-send" style="font-size: 2rem"></i><span class="ml-1">Clients</span></div>
+        <div class="parent"><i class="pi pi-phone" style="font-size: 2rem"></i><span class="ml-1">Contact</span></div>
+    </div>
 </div>

@@ -1,19 +1,15 @@
-.max-container {
-  max-width: 1280px;
+/* .max-container {
+  max-width: 1265px;
   margin: 0 auto;
-}
-
+  background-color: #000;
+} */
 .main {
   background-color: #d9e4dd;
   border: none;
-  /* margin-top: 20px; */
+  /* transition: transform 1s ease-in-out; */
 }
-/* i:hover {
-  color: #f59e0b;
-} */
 i {
   cursor: pointer;
-  /* margin: 0 10px; */
 }
 .searchbox {
   margin-left: 16px;

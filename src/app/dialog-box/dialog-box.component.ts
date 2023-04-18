@@ -19,11 +19,10 @@ export class DialogBoxComponent {
   editId: any
   updateBtn: boolean
   saveBtn: boolean
-  dialogLabel = "Add New Employee";
+  // dialogLabel = "Add New Employee";
   data: Object;
   result: any;
-  // messages: any
-  // showDialog: boolean;
+
 
   constructor(private popup: ConfirmationService,
     private http: HttpClient,
@@ -78,13 +77,14 @@ export class DialogBoxComponent {
       .post('http://localhost:3000/Users', valueOfForm)
       .subscribe((res) => {
         // console.log(res);
-        this.visible = false;
         this.ref.close()
         this.dialogForm.reset();
+        this.visible = false;
+        this.setTableData();
       });
   }
   onEdit(id: any) {
-    this.dialogLabel = "Update Employee";
+    // this.dialogLabel = "Update Employee";
     this.saveBtn = false
     this.updateBtn = true
     this.editId = id
@@ -111,7 +111,7 @@ export class DialogBoxComponent {
   }
   update() {
     console.log("object");
-    this.dialogLabel = "Update Employee";
+    // this.dialogLabel = "Update Employee";
     this.empService.update(this.editId, this.dialogForm.value).subscribe((res) => {
       // console.log(res);
       this.setTableData();

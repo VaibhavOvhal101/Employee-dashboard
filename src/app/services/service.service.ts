@@ -11,10 +11,10 @@ export class ServiceService {
   constructor() { }
   sendNotification(data: any) {
     this.notificationSubject.next(data)
-    console.log('service:-', data)
+    // console.log('service:-', data)
   }
   sendUsrData(data: any) {
     this.userDataSubject.next(data)
-    console.log('user data in service', data)
+    // console.log('user data in service', data)
   }
 }

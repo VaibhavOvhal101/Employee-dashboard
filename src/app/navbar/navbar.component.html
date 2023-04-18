@@ -1,29 +1,60 @@
-<!-- <-- Navbar -->
-<div class="">
-    <nav class="navbar navbar-expand-lg navStyle">
-        <!-- Container wrapper -->
-        <div class="container-fluid">
-            <!-- Collapsible wrapper -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- Navbar brand -->
-                <div class="navbar-brand mt-2 mt-lg-0">
-                    <img src="assets/logo.png" height="40" alt="Logo" loading="lazy" />
-                </div>
-                <div class="heading mt-2">
-                    <h4 style="color: #F59E0B; font-weight: bold;">Employee Managment System</h4>
-                </div>
-
-            </div>
-            <!-- Collapsible wrapper -->
-
-            <!-- Right elements -->
-            <div class="d-flex align-items-center ">
-                <a class="text-white logoutHover" routerLink="/login">
-                    Logout <i class="pi pi-power-off" style="font-size: 12px;"></i>
-                </a>
-            </div>
-            <!-- Right elements -->
+<nav class="fixed-top navbar navbar-expand-lg navStyle">
+  <!-- Container wrapper -->
+  <div class="container-fluid rightElement">
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <div class="navbar-brand mt-2 mt-lg-0">
+        <img src="assets/logo.png" height="40" alt="Logo" loading="lazy" />
+      </div>
+      <div class="heading mt-2">
+        <h4 style="color: #f59e0b; font-weight: bold">
+          Employee Managment System
+        </h4>
+      </div>
+    </div>
+    <div class="btn-group">
+      <button
+        type="button"
+        class="btn btn-danger rounded-circle"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <i class="fa-solid fa-user"></i>
+        <!-- <a class="text-white">Welcome</a> -->
+      </button>
+      <div class="dropdown-menu">
+        <h6 class="dropdown-header navHeader">{{ navData }}</h6>
+        <div class="dropdown-item dropdownHover">
+          <i class="fa-solid fa-user"></i>
+          &nbsp;Profile
         </div>
-        <!-- Container wrapper -->
-    </nav>
-</div>
+        <div class="dropdown-item dropdownHover">
+          <i class="fa-sharp fa-solid fa-gear"></i>
+          &nbsp;Setting
+        </div>
+        <div class="dropdown-item dropdownHover">
+          <i class="fa-solid fa-envelope"></i>
+          &nbsp;Inbox
+        </div>
+
+        <div class="dropdown-item dropdownHover">
+          <i class="fa-sharp fa-solid fa-circle-question"></i>
+          &nbsp;Help
+        </div>
+
+        <div class="dropdown-divider"></div>
+        <div class="dropdown-item dropdownHover" href="#" (click)="onLogout()">
+          <a>
+            <i class="fa-solid fa-arrow-right-from-bracket fa-rotate-180"></i>
+          </a>
+          &nbsp;Logout
+        </div>
+      </div>
+    </div>
+    <!-- Right elements -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- </div> -->

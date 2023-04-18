@@ -9,6 +9,9 @@ import { Router } from '@angular/router';
 import { DialogService } from 'primeng/dynamicdialog';
 import { DialogBoxComponent } from '../dialog-box/dialog-box.component';
 import { DynamicDialogRef } from 'primeng/dynamicdialog';
+import { DropdownModule } from 'primeng/dropdown';
+
+
 
 @Component({
   selector: 'app-dashboard',
@@ -89,9 +92,11 @@ export class DashboardComponent {
       .post('http://localhost:3000/Users', valueOfForm)
       .subscribe((res) => {
         // console.log(res);
-        this.setTableData();
+        // this.setTableData();
         this.dialogForm.reset();
         this.visible = false;
+        this.setTableData();
+
       });
   }
   showBasicDialog() {

@@ -3,7 +3,7 @@
   margin: 0 auto;
   background-color: #000;
 } */
-.main {
+.main1 {
   background-color: #d9e4dd;
   border: none;
   /* transition: transform 1s ease-in-out; */
@@ -26,6 +26,7 @@ i {
 }
 .heading {
   font-family: 'Metrophobic', sans-serif;
+  padding-top: 20px !important;
 }
 .logoutHover {
   cursor: pointer;
@@ -38,5 +39,8 @@ i {
   font-size: 1.5em;
   color: #43425d;
   font-weight: 400;
-  margin: 10px;
+}
+.main {
+  width: 100%;
+  /* margin-left: 10px; */
 }

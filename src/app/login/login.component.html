@@ -1,13 +1,16 @@
-<div class="flex justify-content-center align-self-center">
-  <div class="card bg-dark text-white p-4">
+<div class="flex justify-content-center  w-100">
+  <div class="card main-div text-white px-5 py-4">
+    <div class="d-flex justify-content-center" style="font-size: 50px">
+      <i class="fa-solid fa-lock pb-4" style="color: #fe4066"></i>
+    </div>
     <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
-      <h5>Please Sign in your account</h5>
+      <h5>Please Sign In Your Account</h5>
       <div class="row">
         <div class="col-12">
           <!------------- UserName -------------->
           <input
             pInputText
-            class="form-control"
+            class="form-control input"
             placeholder="User Name"
             formControlName="userName"
             #data
@@ -29,7 +32,7 @@
           <input
             pInputText
             type="password"
-            class="form-control"
+            class="form-control input"
             placeholder="Password"
             formControlName="password"
             #lname
@@ -52,10 +55,10 @@
             pButton
             type="submit"
             label="Sign In"
-            class="btn btn-primary btn-block"
+            class="btn btn-block button"
             (click)="sendData(data)"
           ></button>
-          <span style="color: red">{{ msg }}</span>
+          <span class="text-danger" style="font-size: 13px">{{ msg }}</span>
         </div>
       </div>
     </form>

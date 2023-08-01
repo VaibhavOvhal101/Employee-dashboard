@@ -114,9 +114,10 @@ export class DialogBoxComponent {
     // this.dialogLabel = "Update Employee";
     this.empService.update(this.editId, this.dialogForm.value).subscribe((res) => {
       // console.log(res);
-      this.setTableData();
       this.dialogForm.reset();
       this.visible = false;
+      this.setTableData();
+
     })
   }
 }

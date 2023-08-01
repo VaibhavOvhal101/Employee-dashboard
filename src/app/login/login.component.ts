@@ -48,7 +48,6 @@ export class LoginComponent {
   }
   check(uname: string, p: string) {
     var output = this.service.checkusernameandpassword(uname, p);
-
     if (output == true) {
       this.router.navigate(['/dashboard']);
     } else {

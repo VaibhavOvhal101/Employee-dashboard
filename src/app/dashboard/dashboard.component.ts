@@ -4,14 +4,12 @@ import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ServiceService } from '../services/service.service';
-import { ConfirmationService } from 'primeng/api'
+import { ConfirmationService } from 'primeng/api';
 import { Router } from '@angular/router';
 import { DialogService } from 'primeng/dynamicdialog';
 import { DialogBoxComponent } from '../dialog-box/dialog-box.component';
 import { DynamicDialogRef } from 'primeng/dynamicdialog';
 import { DropdownModule } from 'primeng/dropdown';
-
-
 
 @Component({
   selector: 'app-dashboard',
@@ -29,35 +27,34 @@ export class DashboardComponent {
   rows: number = 5;
   data: any;
   result: any;
-  editId: any
-  updateBtn: boolean
-  saveBtn: boolean
-  dialogLabel = "Add New Employee";
-  messages: any
+  editId: any;
+  updateBtn: boolean;
+  saveBtn: boolean;
+  dialogLabel = 'Add New Employee';
+  messages: any;
+  // popup: any;
   showDialog: boolean;
-
 
   constructor(
     private empService: EmpTableService,
     private http: HttpClient,
     // private dialog: ConfirmDialogModule,
     // private notification: ServiceService,
-    // private popup: ConfirmationService,
-    // private route: Router,
-    private dialogBox: DialogService,
-
-  ) { }
+    private popup: ConfirmationService,
+    private route: Router,
+    private dialogBox: DialogService
+  ) {}
 
   // ---------------Employee list From Json.DB------------------
   ngOnInit() {
     this.setTableData();
   }
   setTableData() {
-    this.saveBtn = true
+    this.saveBtn = true;
     this.empService.employee().subscribe((response) => {
       this.empList = response;
       // console.log(this.empList);
-      this.empList.reverse()
+      this.empList.reverse();
       this.dialogForm.reset();
     });
   }
@@ -96,15 +93,13 @@ export class DashboardComponent {
         this.dialogForm.reset();
         this.visible = false;
         this.setTableData();
-
       });
   }
   showBasicDialog() {
     const ref = this.dialogBox.open(DialogBoxComponent, {
       header: 'Add employee',
       width: '40%',
-    }
-    );
+    });
   }
   onPageChange(event: any) {
     this.first = event.first;
@@ -112,22 +107,22 @@ export class DashboardComponent {
   }
   // -------------------Edit-----------------
   onEdit(id: any) {
-    this.dialogLabel = "Update Employee";
-    this.saveBtn = false
-    this.updateBtn = true
-    this.editId = id
+    this.dialogLabel = 'Update Employee';
+    this.saveBtn = false;
+    this.updateBtn = true;
+    this.editId = id;
     this.showBasicDialog();
     this.http.get('http://localhost:3000/Users').subscribe((res) => {
       this.data = res;
       // console.log(this.data);
       // console.log(this.data.filter(i => i.id == id));
-      this.result = this.data.filter(i => i.id == id);
+      this.result = this.data.filter((i) => i.id == id);
       this.dialogForm.patchValue({
         Name: this.result[0].Name,
         mobile: this.result[0].mobile,
         Address: this.result[0].Address,
-        Age: this.result[0].Age
-      })
+        Age: this.result[0].Age,
+      });
     });
   }
   putData() {
@@ -138,40 +133,43 @@ export class DashboardComponent {
       });
   }
   update() {
-    this.empService.update(this.editId, this.dialogForm.value).subscribe((res) => {
-      // console.log(res);
-      this.setTableData();
-      this.dialogForm.reset();
-      this.visible = false;
-    })
+    this.empService
+      .update(this.editId, this.dialogForm.value)
+      .subscribe((res) => {
+        // console.log(res);
+        this.setTableData();
+        this.dialogForm.reset();
+        this.visible = false;
+      });
   }
   // resetValue() {
   //   this.showDialog = false
   // }
   // -----------------------Delete-------------------
+  // onDelete(id) {
+  //   if (confirm('Are you sure want to delete?')) {
+  //     this.empService.delete(id).subscribe((res) => {});
+  //     // this.route.navigate(['/dashboard']);\
+  //     window.location.reload();
+  //   }
+
   onDelete(id) {
-    if (confirm("Are you sure want to delete?")) {
-      this.empService.delete(id).subscribe((res) => {
-      })
-    }
-    this.setTableData()
-    // onDelete(id) {
-    //   this.popup.confirm({
-    //     icon: 'pi pi-info-circle',
-    //     message: 'Are you sure that you want to delete?',
-    //     accept: () => {
-    //       console.log("id:---", id);
+    this.popup.confirm({
+      icon: 'pi pi-info-circle',
+      message: 'Are you sure that you want to delete?',
+      accept: () => {
+        console.log('id:---', id);
 
-    //       this.empService.delete(id).subscribe((res) => {
-    //         console.log("res:-", res);
+        this.empService.delete(id).subscribe((res) => {
+          console.log('res:-', res);
 
-    //         this.setTableData
-    //       })
-    //     },
-    //     reject: () => {
-    //       this.setTableData
-    //     }
-    //   });
-    // }
+          this.setTableData;
+          window.location.reload();
+        });
+      },
+      reject: () => {
+        this.setTableData;
+      },
+    });
   }
 }
